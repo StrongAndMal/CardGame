@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher or Lower Card Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Rules Popup -->
+    <div id="rules-popup" class="rules-popup">
+      <div class="rules-content">
+        <h2>How to Play</h2>
+        <p>Welcome to Higher or Lower!</p>
+        <ul>
+          <li>Start with 100 points</li>
+          <li>Place your bet (minimum 25 points)</li>
+          <li>
+            Guess if the dealer's card will be higher or lower than your card
+          </li>
+          <li>If you're right, you win your bet</li>
+          <li>If you're wrong, you lose your bet</li>
+          <li>If it's a draw, no points are lost or gained</li>
+          <li>Game ends when you run out of points</li>
+        </ul>
+        <button id="start-game-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <h1>Higher or Lower</h1>
+      <div class="game-description">
+        <p>
+          Test your luck! Guess if the dealer's card will be higher or lower
+          than your card.
+        </p>
+      </div>
+
+      <div class="score-container">
+        <p>Points: <span id="points">100</span></p>
+        <p>Bet: <span id="bet">25</span></p>
+      </div>
+
+      <div class="card-container">
+        <div class="card player-card">
+          <h3>Your Card</h3>
+          <div class="card-value" id="player-card-value">?</div>
+        </div>
+        <div class="card dealer-card">
+          <h3>Dealer's Card</h3>
+          <div class="card-value" id="dealer-card-value">?</div>
+        </div>
+      </div>
+
+      <div class="message-area">
+        <p id="game-message">Place your bet and make your guess!</p>
+      </div>
+
+      <div class="controls">
+        <button id="higher-btn"><span>Higher</span></button>
+        <button id="lower-btn"><span>Lower</span></button>
+      </div>
+
+      <div class="betting-controls">
+        <button id="decrease-bet"><span>Decrease Bet</span></button>
+        <button id="increase-bet"><span>Increase Bet</span></button>
+        <button id="all-in"><span>All In</span></button>
+      </div>
+
+      <div class="game-controls">
+        <button id="start-over"><span>Start Over</span></button>
+      </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+    <audio id="lose-sound" src="sounds/lose.mp3" preload="auto"></audio>
+    <audio id="bet-sound" src="sounds/bet.mp3" preload="auto"></audio>
+    <audio id="card-sound" src="sounds/card.mp3" preload="auto"></audio>
+    <audio
+      id="game-over-sound"
+      src="sounds/game-over.mp3"
+      preload="auto"
+    ></audio>
+    <audio id="draw-sound" src="sounds/draw.mp3" preload="auto"></audio>
+
+    <script src="game.js"></script>
+  </body>
+</html>
